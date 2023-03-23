@@ -10,6 +10,8 @@
 <tr>
    <td><label>Nome </label></td>
    <td><input [(ngModel)]="aluno.nome" ></td>
+   <td><button
+      (click)="gravar(aluno)">Adicionar</button></td>
 </tr>
 <tr>
    <td><label>CPF </label></td>
@@ -19,8 +21,12 @@
    <td><label>e-mail </label></td>
    <td><input [(ngModel)]="aluno.email" ></td>
 </tr>
-<tr>
-   <td><label>github </label></td>
-   <td><input [(ngModel)]="aluno.github" ></td>
-</tr>
 </table>
+
+<ul>
+<li *ngFor="let a of alunos">
+   <span>{{a.nome}}</span>,
+   <span>{{a.cpf}}</span>,
+   <span>{{a.email}}</span>
+</li>
+</ul>
