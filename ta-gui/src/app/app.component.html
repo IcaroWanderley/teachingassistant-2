@@ -1,3 +1,4 @@
+<html (mousemove)="onmove()">
 <h1>
   Teaching Assistant
 </h1>
@@ -10,13 +11,26 @@
 <tr>
    <td><label>Nome </label></td>
    <td><input [(ngModel)]="aluno.nome" ></td>
+   <td><button (click)="gravar(aluno)">Adicionar</button></td>
+
 </tr>
 <tr>
    <td><label>CPF </label></td>
    <td><input [(ngModel)]="aluno.cpf" ></td>
+   <td *ngIf="cpfduplicado">
+      Já existe um aluno com esse CPF
 </tr>
 <tr>
    <td><label>e-mail </label></td>
    <td><input [(ngModel)]="aluno.email" ></td>
 </tr>
 </table>
+
+<ul class="alunos">
+<li *ngFor="let a of alunos">
+   <span>{{a.nome}}</span>,
+   <span>{{a.cpf}}</span>,
+   <span>{{a.email}}</span>
+</li>
+</ul>
+</html>
