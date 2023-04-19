@@ -10,6 +10,7 @@ import { AlunoService } from './aluno.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+<<<<<<< Updated upstream
   aluno: Aluno = {nome: "", cpf: "", email: "",};
   alunoService = new AlunoService();
   alunos: Aluno[] = []
@@ -19,4 +20,21 @@ export class AppComponent {
     this.alunos.push(a);
     this.aluno = {nome: "", cpf: "", email: ""};
  }
+=======
+   aluno: Aluno = {nome: "", cpf: "", email: ""};
+   alunoService = new AlunoService();
+   alunos: Aluno[] = [];
+   cpfduplicado: boolean = false;
+   gravar(a: Aluno): void {
+     if (this.alunoService.gravar(a)) {
+       this.alunos.push(a);
+       this.aluno = {nome: "", cpf: "", email: ""};
+     } else {
+      this.cpfduplicado = true;
+     }
+  }
+  onMove(): void {
+    this.cpfduplicado = false;
+}
+>>>>>>> Stashed changes
 }
