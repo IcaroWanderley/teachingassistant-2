@@ -17,9 +17,4 @@ import { AppComponent } from './app.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-<<<<<<< Updated upstream
 export class AppModule { }
-// AAAAAAAAAAAAAAAA //
-=======
-export class AppModule { }
->>>>>>> Stashed changes

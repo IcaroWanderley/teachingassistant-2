@@ -2,11 +2,6 @@ import { Aluno } from './aluno';
 
 export class AlunoService {
   alunos: Aluno[] = [];
-<<<<<<< Updated upstream
-  gravar(aluno: Aluno): void {
-     this.alunos.push(aluno);
-  }
-=======
   
   gravar(aluno: Aluno): Aluno | any{
     var result = null;
@@ -19,5 +14,4 @@ export class AlunoService {
     cpfNaoCadastrado(cpf: string): boolean {
      return !this.alunos.find(a => a.cpf == cpf);
   }
->>>>>>> Stashed changes
 }
